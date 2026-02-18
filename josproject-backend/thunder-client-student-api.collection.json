@@ -1,0 +1,82 @@
+{
+  "version": "1.1.0",
+  "collections": [
+    {
+      "id": "student-api-1",
+      "name": "Student API",
+      "requests": [
+        {
+          "id": "register-student",
+          "name": "Register Student",
+          "url": "{{baseUrl}}/students/register",
+          "method": "POST",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"fullName\": \"Test Student\",\n  \"email\": \"test@example.com\",\n  \"phone\": \"0123456789\",\n  \"password\": \"password123\",\n  \"program\": \"Computer Science\"\n}",
+            "rawType": "json"
+          }
+        },
+        {
+          "id": "login-student",
+          "name": "Login Student",
+          "url": "{{baseUrl}}/students/login",
+          "method": "POST",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}",
+            "rawType": "json"
+          }
+        },
+        {
+          "id": "update-profile",
+          "name": "Update Profile",
+          "url": "{{baseUrl}}/students/profile",
+          "method": "PUT",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"email\": \"test@example.com\",\n  \"phone\": \"0987654321\",\n  \"profilePic\": \"https://example.com/pic.jpg\"\n}",
+            "rawType": "json"
+          }
+        }
+        ,
+        {
+          "id": "approve-student",
+          "name": "Approve Student",
+          "url": "{{baseUrl}}/students/{{studentId}}/approve",
+          "method": "PATCH",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "",
+            "rawType": "json"
+          }
+          ,
+          "tests": "const res = pm.response.json(); pm.test('status is 200', () => pm.response.to.have.status(200)); pm.test('admissionStatus is approved', () => pm.expect(res.admissionStatus).to.eql('approved'));"
+        }
+      ]
+    }
+  ]
+}
