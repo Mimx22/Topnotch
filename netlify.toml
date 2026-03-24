@@ -1,0 +1,8 @@
+[build]
+  base = "reactProjects/Topnotch"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  CI = "false"
+  NODE_VERSION = "20"
