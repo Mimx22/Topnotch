@@ -30,7 +30,7 @@ export default function About() {
         <div className="flex-1 w-full relative">
           <div className="absolute inset-0 bg-primary/10 blur-[80px] rounded-full pointer-events-none" />
           <div className="aspect-square w-[80%] max-w-[400px] mx-auto relative glass rounded-3xl overflow-hidden border border-white/10 group shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-            <div className="w-full h-full bg-neutral-800 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+            <div className="w-full h-full relative bg-neutral-800 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
               <Image 
                 src="/profile.png" 
                 alt="Asala Taiye Miracle" 
