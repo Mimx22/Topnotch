@@ -1,5 +1,4 @@
 [build]
-  base = "reactProjects/Topnotch"
   command = "npm run build"
   publish = ".next"
 
