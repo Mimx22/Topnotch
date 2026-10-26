@@ -10,25 +10,18 @@ export default function Projects() {
       ctaText: "View Live Site"
     },
     {
-      title: "Jos Medical College Portal",
-      description: "A robust full-stack admissions portal featuring secure student authentication, custom ID formatting, and automated email workflows.",
-      tags: ["Full-Stack", "React", "Node.js", "Authentication"],
-      link: "https://health-college-websites.vercel.app/",
+      title: "Health College Website",
+      description: "Official modern website for Medical Career College of Health Science and Technology, Jos — featuring comprehensive admissions, programs, and academic information.",
+      tags: ["HTML5", "Modern CSS", "Responsive Design", "Web Application"],
+      link: "https://medicalcareeracademy.ng",
       ctaText: "View Live Site"
     },
     {
-      title: "Rexolute Therapy Web App",
-      description: "A comprehensive multi-page application with a dashboard-style user interface built with customized, reusable React components.",
-      tags: ["React", "Component-Driven", "Vite", "RESTful APIs"],
-      link: "https://rexolute-webapp.vercel.app/contact-us",
+      title: "Chopnaija",
+      description: "A dynamic African culinary ordering and food showcase platform delivering a smooth, authentic browsing experience and responsive UI.",
+      tags: ["JavaScript", "React", "Tailwind CSS", "E-Commerce"],
+      link: "https://chopnaija-eta.vercel.app/",
       ctaText: "View Live Site"
-    },
-    {
-      title: "To-Do Application",
-      description: "A highly responsive task management application featuring full CRUD functionality and real-time database synchronization via Firebase.",
-      tags: ["JavaScript", "React", "Firebase", "State Management"],
-      link: "https://github.com/mimx22",
-      ctaText: "View Code"
     }
   ];
 
@@ -41,10 +34,10 @@ export default function Projects() {
               Featured <span className="text-primary">Projects</span>
             </h2>
             <p className="text-lg text-foreground-muted max-w-2xl">
-              A selection of my recent work, highlighting my expertise in full-stack development, UI/UX design, and complex problem solving.
+              A selection of my recent work, highlighting my expertise in full-stack development, UI/UX design, and modern web applications.
             </p>
           </div>
-          <Link href="https://github.com" target="_blank" className="font-medium text-primary hover:text-primary-dark transition-colors whitespace-nowrap">
+          <Link href="https://github.com/Mimx22" target="_blank" className="font-medium text-primary hover:text-primary-dark transition-colors whitespace-nowrap">
             View full archive →
           </Link>
         </div>

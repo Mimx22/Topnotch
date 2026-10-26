@@ -30,12 +30,12 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <button className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary-dark text-background font-semibold hover:opacity-90 transition-opacity">
+            <a href="#projects" className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary-dark text-background font-semibold hover:opacity-90 hover:scale-105 transition-all text-center">
               View My Work
-            </button>
-            <button className="glass px-8 py-4 rounded-full text-foreground hover:bg-white/10 transition-colors">
+            </a>
+            <a href="#contact" className="glass px-8 py-4 rounded-full text-foreground hover:bg-white/10 hover:border-primary/40 transition-colors text-center">
               Contact Me
-            </button>
+            </a>
           </div>
         </div>
       </section>
