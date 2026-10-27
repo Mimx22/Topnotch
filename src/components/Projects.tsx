@@ -6,7 +6,7 @@ export default function Projects() {
       title: "DriveSense App",
       description: "A highly polished SaaS dashboard UI featuring advanced data visualization, modern interactive elements, and a premium dark-themed interface.",
       tags: ["React", "Tailwind CSS", "Dashboard", "UI/UX"],
-      link: "https://mimx22-drivesense-app.netlify.app/",
+      link: "https://drivesen.netlify.app/",
       ctaText: "View Live Site"
     },
     {
