@@ -14,8 +14,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Topnotch - Full Stack Developer",
-  description: "Portfolio of a topnotch full-stack web developer.",
+  title: "Asala Taiye Miracle | Full-Stack Developer",
+  description: "Full-Stack Developer based in Lagos, Nigeria with 3 years of experience building scalable, responsive web applications using React, JavaScript, Node.js, Firebase, and MongoDB.",
+  keywords: [
+    "Asala Taiye Miracle",
+    "Full-Stack Developer",
+    "React",
+    "Node.js",
+    "JavaScript",
+    "Firebase",
+    "MongoDB",
+    "Lagos Nigeria Developer",
+    "Web Developer"
+  ],
+  authors: [{ name: "Asala Taiye Miracle" }],
 };
 
 export default function RootLayout({

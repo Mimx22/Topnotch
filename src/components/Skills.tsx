@@ -1,37 +1,88 @@
 export default function Skills() {
-  const skills = [
-    { name: "React.js / JavaScript (ES6+)", level: 95 },
-    { name: "HTML5 / CSS3 / SCSS", level: 95 },
-    { name: "Tailwind CSS / Figma", level: 90 },
-    { name: "Node.js / RESTful APIs", level: 85 },
-    { name: "Firebase / MongoDB", level: 80 },
-    { name: "Git / GitHub / Vite", level: 85 },
+  const skillCategories = [
+    {
+      category: "Frontend Development",
+      description: "Building responsive, modern, and accessible user interfaces",
+      skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Tailwind CSS", "SCSS", "Responsive Web Design", "Figma-to-Code"]
+    },
+    {
+      category: "Backend & Data",
+      description: "Developing scalable server APIs and handling persistence",
+      skills: ["Node.js", "RESTful APIs", "Firebase", "MongoDB", "Component-Based Architecture"]
+    },
+    {
+      category: "Tools & Workflow",
+      description: "Version control, tooling, and development environment",
+      skills: ["Git", "GitHub", "Vite", "VS Code", "Netlify", "Vercel"]
+    }
+  ];
+
+  const coreCompetencies = [
+    "Full-Stack Web Development (React.js & Node.js)",
+    "Component-Based Architecture",
+    "REST API Integration",
+    "Responsive, Mobile-First Design",
+    "Figma-to-Code UI Implementation",
+    "Firebase & MongoDB Integration",
+    "Git & GitHub Workflow"
   ];
 
   return (
     <section id="skills" className="py-24 px-6 md:px-24 bg-white/[0.02]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
+          <div className="inline-flex glass px-4 py-1.5 rounded-full text-primary text-xs font-semibold tracking-wide uppercase mb-3">
+            Expertise
+          </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            My <span className="text-primary">Capabilities</span>
+            Technical Skills & <span className="text-primary">Competencies</span>
           </h2>
           <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
-            I specialize in a wide range of modern web technologies designed to build robust, scalable, and beautifully designed applications.
+            A comprehensive overview of my technical stack, development tools, and full-stack capabilities.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
-          {skills.map((skill) => (
-            <div key={skill.name} className="flex flex-col gap-2">
-              <div className="flex justify-between items-end">
-                <span className="text-lg font-medium">{skill.name}</span>
-                <span className="text-sm text-foreground-muted">{skill.level}%</span>
-              </div>
-              <div className="h-3 w-full bg-white/5 rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-primary to-primary-dark rounded-full"
-                  style={{ width: `${skill.level}%` }}
-                />
+        {/* Core Competencies Badges */}
+        <div className="glass p-6 md:p-8 rounded-2xl border border-white/10 mb-12">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 flex items-center gap-2">
+            <span>⚡</span> Core Competencies
+          </h3>
+          <div className="flex flex-wrap gap-2.5">
+            {coreCompetencies.map((comp, idx) => (
+              <span 
+                key={idx}
+                className="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-foreground font-medium hover:border-primary/40 hover:bg-primary/5 transition-all"
+              >
+                {comp}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Categorized Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {skillCategories.map((cat, idx) => (
+            <div 
+              key={idx}
+              className="glass p-8 rounded-2xl border border-white/10 hover:border-primary/40 transition-all flex flex-col justify-between group hover:-translate-y-1"
+            >
+              <div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  {cat.category}
+                </h3>
+                <p className="text-xs text-foreground-muted mb-6 leading-relaxed">
+                  {cat.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((skill) => (
+                    <span 
+                      key={skill}
+                      className="px-3 py-1 rounded-md bg-white/5 text-xs text-foreground-muted font-medium border border-white/5"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
